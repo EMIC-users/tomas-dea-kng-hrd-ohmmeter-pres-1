@@ -21,7 +21,9 @@ void onReset()
 void etOut1()
 {
     LEDs_Led2_blink(60, 240, 1);
+    Ohmmeter_Pres_getFormattedValue(/* unsupported parameter type: emic-data-buffer */);
     pI2C("PRES\t%.2f", Ohmmeter_Pres_getResistance());
+    pI2C("FMTPRES");
 }
 
 
