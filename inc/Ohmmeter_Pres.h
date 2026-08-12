@@ -25,7 +25,6 @@ void Ohmmeter_Pres_poll(void);
 
 float Ohmmeter_Pres_getResistance(void);
 
-void Ohmmeter_Pres_getFormattedValue(char* buffer);
 
 /*==================[end of file]============================================*/
 #endif
