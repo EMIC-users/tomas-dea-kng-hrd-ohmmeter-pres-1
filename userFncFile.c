@@ -11,6 +11,9 @@
 #include "inc/conversionFunctions.h"
 #include "inc/EMICBus.h"
 
+/* User Arrays */
+char txt[16] = "0";
+
 void onReset()
 {
     LEDs_Led1_blink(100, 400, 8);
@@ -21,6 +24,7 @@ void onReset()
 void etOut1()
 {
     LEDs_Led2_blink(60, 240, 1);
+    Ohmmeter_Pres_getFormattedValue(txt);
     pI2C("PRES\t%.2f", Ohmmeter_Pres_getResistance());
 }
 
