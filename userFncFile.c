@@ -21,7 +21,7 @@ void onReset()
 void etOut1()
 {
     LEDs_Led2_blink(60, 240, 1);
-    Ohmmeter_Pres_getFormattedValue("        ");
+    Ohmmeter_Pres_getFormattedValue(txt);
     pI2C("PRES\t%.2f", Ohmmeter_Pres_getResistance());
 }
 
